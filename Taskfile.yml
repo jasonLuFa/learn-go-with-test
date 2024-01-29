@@ -1,0 +1,39 @@
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  f1:
+    cmds:
+      - go test -v ./fundamentals/1.hello-world/...
+  f2:
+    cmds:
+      - go test -v ./fundamentals/2.integer/...
+  f3:
+    cmds:
+      - go test -v ./fundamentals/3.for/...
+      - go test  -bench=BenchmarkRepeat ./fundamentals/3.for/...
+  f4:
+    cmds:
+      - go test -v -cover ./fundamentals/4.slice_array/...
+  f5:
+    cmds:
+      - go test -v ./fundamentals/5.structs_interface/...
+  f6:
+    cmds:
+      - go test -v ./fundamentals/6.pointers_error/...
+  f7:
+    cmds:
+      - go test -v ./fundamentals/7.maps/...
+
+  a1:
+    cmds:
+      - go test -v ./advanced/1.di/...
+  a2:
+    cmds:
+      - go test -v ./advanced/2.mock/...
+  a3:
+    cmds:
+      - go test -v ./advanced/3.di/...
